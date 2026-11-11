@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Better Degree Plan</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <h1 class ="title">Degree Overview </h1>
+
+    <div class = "summary">
+
+        <div class = "summary-card">
+            <h2>Completed Credits</h2>
+            <p id = "completed-credits">72 Credits</p>
+        </div>
+
+        <div class = "summary-card">
+            <h2>Remaining Credits</h2>
+            <p id = "remaining-credits">48 Credits</p>
+        </div>
+
+        <div class = "summary-card">
+            <h2>Next Semester</h2>
+            <p id = "next-semester">Spring 2027</p>
+        </div>
+    </div>
+
+    <section class="course-section">
+        <h2>Completed Courses</h2>
+    
+        <div id="completed-preview" class="courses-list"></div>
+    
+        <button id="completed-button" class="view-button">
+            View All Completed Courses
+        </button>
+    </section>
+    
+    <section class="course-section">
+        <h2>Remaining Courses</h2>
+    
+        <div id="remaining-preview" class="courses-list"></div>
+    
+        <button id="remaining-button" class="view-button">
+            View All Remaining Courses
+        </button>
+    </section>
+
+    <div id="course-modal" class="modal hidden">
+        <div class="modal-content">
+    
+            <div class="modal-header">
+                <h2 id="modal-title">Courses</h2>
+                <button id="close-modal" class="close-button">&times;</button>
+            </div>
+    
+            <div id="modal-course-list" class="courses-list"></div>
+    
+        </div>
+    </div>
+
+    <section class = "planner">
+        <h2>Semester Planner</h2>
+
+        <div class = "planner-container">
+            <div class = "planner-menu">
+                <h3>Available Courses</h3>
+
+                <div id = "available-courses" class = "available-list">
+                </div>
+            </div>
+        </div>
+
+        <div class = "planner-menu">
+            <label for = "semester-choose">
+                <h3>Choose Semester</h3>
+            </label>
+
+            <select id = "semester-choose">
+                <option value = "Spring 2027">Spring 2027</option>
+                <option value = "Fall 2027">Fall 2027</option>
+                <option value = "Spring 2028">Spring 2028</option>
+            </select>
+
+            <div id="semester-courses" class="semester-list"></div>
+        </div>
+    </section>
+    <script src = "script.js"></script>
+</body>
+</html>
